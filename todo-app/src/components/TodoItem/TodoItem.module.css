@@ -1,0 +1,13 @@
+.todoItemContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .todoItemContainer input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: #888;
+  }
