@@ -17,7 +17,9 @@
     "mysql": "^2.18.1"
   },
   "devDependencies": {
-    "@types/node": "^22.15.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.3",
     "typescript": "^5.8.3"
   }
 }
