@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import './App.css';
 
-export interface Todo {
+interface Todo {
   id: number;
   text: string;
   completed: boolean;
@@ -46,7 +46,7 @@ function App() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const newTodo: Todo = await response.json();
-      setTodos([...todos, newTodo]);
+      setTodos([...todos, newTodo]); // 新しいTodoを既存の配列の末尾に追加
     } catch (error) {
       console.error('Failed to add todo:', error);
       // エラー処理を実装
