@@ -9,6 +9,8 @@ interface Todo {
   id: number;
   text: string;
   completed: boolean;
+  createdAt: string; // または Date 型
+  updatedAt: string; // または Date 型
 }
 
 function App() {
