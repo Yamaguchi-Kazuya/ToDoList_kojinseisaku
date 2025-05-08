@@ -31,3 +31,67 @@
   .todoItem button:hover {
     background-color: #e03a3a;
   }
+  .editInput {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .editButton {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .editButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .saveButton {
+    padding: 5px 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .saveButton:hover {
+    background-color: #1e7e34;
+  }
+  
+  .cancelButton {
+    padding: 5px 10px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .cancelButton:hover {
+    background-color: #c82333;
+  }
+  
+  .deleteButton {
+    margin-left: 10px; /* 編集ボタンとの間隔を調整 */
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .deleteButton:hover {
+    background-color: #e03a3a;
+  }

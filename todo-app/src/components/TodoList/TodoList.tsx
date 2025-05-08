@@ -12,9 +12,25 @@ interface TodoListProps {
   todos: Todo[];
   onToggleComplete: (id: number) => void;
   onDeleteTask: (id: number) => void;
+  startEdit: (id: number, text: string) => void;
+  editingId: number | null;
+  editText: string;
+  setEditText: (text: string) => void;
+  saveEdit: (id: number) => void;
+  cancelEdit: () => void;
 }
 
-const TodoList: React.FC<TodoListProps> = ({ todos, onToggleComplete, onDeleteTask }) => {
+const TodoList: React.FC<TodoListProps> = ({ 
+  todos, 
+  onToggleComplete, 
+  onDeleteTask,
+  startEdit,
+  editingId,
+  editText,
+  setEditText,
+  saveEdit,
+  cancelEdit,
+}) => {
   return (
     <ul className={styles.todoList}>
       {todos.map((todo) => (
@@ -23,6 +39,12 @@ const TodoList: React.FC<TodoListProps> = ({ todos, onToggleComplete, onDeleteTa
           todo={todo}
           onToggleComplete={onToggleComplete}
           onDeleteTask={onDeleteTask}
+          startEdit={startEdit}
+          isEditing={editingId === todo.id}
+          editText={editText}
+          setEditText={setEditText}
+          saveEdit={saveEdit}
+          cancelEdit={cancelEdit}
         />
       ))}
     </ul>
