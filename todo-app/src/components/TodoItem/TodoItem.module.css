@@ -1,0 +1,33 @@
+.todoItem {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .todoItem:last-child {
+    border-bottom: none;
+  }
+  
+  .todoItem input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .todoItem .completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .todoItem button {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .todoItem button:hover {
+    background-color: #e03a3a;
+  }
