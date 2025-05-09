@@ -95,3 +95,40 @@
   .deleteButton:hover {
     background-color: #e03a3a;
   }
+  .nameContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* タスク名がクリック可能であることを示す */
+  }
+  
+  .nameContainer:hover {
+    text-decoration: underline;
+    color: #007bff; /* ホバー時の色を変更 */
+  }
+  
+  .detailsContainer {
+    margin-left: 20px; /* 詳細などをインデント */
+    margin-top: 10px;
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+  }
+  
+  .details {
+    white-space: pre-wrap; /* 改行を保持 */
+    margin-bottom: 10px;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .tag {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 16px; /* 丸みを大きく */
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+  }

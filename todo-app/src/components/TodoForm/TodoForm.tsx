@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import styles from './TodoForm.module.css';
 
 interface TodoFormProps {
-  onAddTask: (text: string) => void;
+  onAddTask: (name: string, details: string, tags: string) => void;
 }
 
 const TodoForm: React.FC<TodoFormProps> = ({ onAddTask }) => {
-  const [inputText, setInputText] = useState('');
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputText(event.target.value);
-  };
+  const [nameInput, setNameInput] = useState('');
+  const [detailsInput, setDetailsInput] = useState('');
+  const [tagsInput, setTagsInput] = useState('');
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    if (inputText.trim()) {
-      onAddTask(inputText);
-      setInputText('');
+    if (nameInput.trim()) {
+      onAddTask(nameInput, detailsInput, tagsInput);
+      setNameInput('');
+      setDetailsInput('');
+      setTagsInput('');
     }
   };
 
@@ -24,11 +24,26 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAddTask }) => {
     <form onSubmit={handleSubmit} className={styles.todoForm}>
       <input
         type="text"
-        value={inputText}
-        onChange={handleChange}
-        placeholder="新しいタスクを入力"
+        value={nameInput}
+        onChange={(e) => setNameInput(e.target.value)}
+        placeholder="タスク名"
+        className={styles.input}
+        required
       />
-      <button type="submit">追加</button>
+      <textarea
+        value={detailsInput}
+        onChange={(e) => setDetailsInput(e.target.value)}
+        placeholder="詳細"
+        className={styles.textarea}
+      />
+      <input
+        type="text"
+        value={tagsInput}
+        onChange={(e) => setTagsInput(e.target.value)}
+        placeholder="タグ (カンマ区切り)"
+        className={styles.input}
+      />
+      <button type="submit" className={styles.addButton}>追加</button>
     </form>
   );
 };
